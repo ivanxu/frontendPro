@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="icon" href="img/bio.ico">
+    <title>生物信息管理系统</title>
+	<link href="css/cikonss.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->      
+  </head>
+
+  <body>
+    <div class="navbar navbar-default  navbar-fixed-top nav-static-top nav-bgcolor" role="navigation" >
+      <div class="container-fluid">
+      	<div class="nav-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div> 
+		 <div class=""><a class="navbar-brand"  href="#"><strong class="brand-name pull-left">生物信息管理系统</strong></a></div>      
+        <div class="navbar-collapse  collapse " id="nav_collapse">
+	          <div>
+		          <button class="btn btn-primary btn-sm pull-right btn-style" data-toggle="modal" data-target="#myModal"><strong>退出</strong></button>
+		          <button class="btn btn-danger btn-sm pull-right btn-style"><strong>消息</strong><span class="badge badge-font-size">999+</span></button>
+	          </div>
+	          <div class="pull-right welcome"><h5><strong class="text-primary">欢迎你，Ivan</strong></h5></div>
+	          <ul class="nav  nav-pills  navbar-items">
+	            <li class="active li-style"><a href="#"><i class="glyphicon glyphicon-book"></i><strong class="nav-pills-title">项目管理</strong></a></li>
+	            <li><a href="#"><i class="glyphicon glyphicon-book"></i><strong class="nav-pills-title">文档管理</strong></a></li>
+	            <li><a href="#"><i class="glyphicon glyphicon-book"></i><strong class="nav-pills-title">财务管理</strong></a></li>
+	            <li><a href="#"><i class="glyphicon glyphicon-book"></i><strong class="nav-pills-title">样品管理</strong></a></li>
+	            <li><a href="#"><i class="glyphicon glyphicon-book"></i><strong class="nav-pills-title">文献管理</strong></a></li>
+	          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar  sidebar-bgcolor">
+          <ul class="nav nav-sidebar">
+            <li class="active">
+            	<a href="#">
+            	<i class="glyphicon glyphicon-pencil sidebar-icon-color"></i>
+            	<strong class="sidebar-title">项目基本信息</strong>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            	<i class="glyphicon glyphicon-pencil sidebar-icon-color"></i>
+            	<strong class="sidebar-title">客户基本信息</strong>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            	<i class="glyphicon glyphicon-pencil sidebar-icon-color"></i>
+            	<strong class="sidebar-title">外包信息</strong>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            	<i class="glyphicon glyphicon-pencil sidebar-icon-color"></i>
+            	<strong class="sidebar-title">项目进度</strong>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            	<i class="glyphicon glyphicon-pencil sidebar-icon-color"></i>
+            	<strong class="sidebar-title">客户联系记录</strong>
+            	</a>
+            </li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li>
+            	<a href="">
+            	<i class="glyphicon glyphicon-cog sidebar-icon-color"></i>
+            	<strong class="sidebar-title">用户设置</strong>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            	<i class="glyphicon glyphicon-log-in sidebar-icon-color"></i>
+            	<strong class="sidebar-title">版权声明</strong>
+            	</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <ol class="breadcrumb breadcrumb-bgcolor hidden-xs hidden-sm">
+			  <li><span class="label label-success"><strong>项目管理</strong></span></li>
+			  <li class="active"><span class="label label-success "><strong>项目基本信息</strong></span></li>
+		</ol>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>项目编号</th>
+                  <th>项目类型</th>
+                  <th>开始日期</th>
+                  <th>结束日期</th>
+                  <th>项目内容</th>
+                  <th>优先级</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1001</td>
+                  <td>医药类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-warning-sign" style="color: rgb(255, 0, 0);"></span> 高</td>
+                </tr>
+                <tr>
+                  <td>1002</td>
+                  <td>器械类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 211, 0);"></span> 低</td>
+                </tr>
+                 <tr>
+                  <td>1003</td>
+                  <td>医药类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-warning-sign" style="color: rgb(255, 0, 0);"></span> 高</td>
+                </tr>
+                 <tr>
+                  <td>1004</td>
+                  <td>医药类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-warning-sign" style="color: rgb(255, 0, 0);"></span> 高</td>
+                </tr>
+                 <tr>
+                  <td>1005</td>
+                  <td>医药类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-warning-sign" style="color: rgb(255, 0, 0);"></span> 高</td>
+                </tr>
+                 <tr>
+                  <td>1006</td>
+                  <td>医药类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-warning-sign" style="color: rgb(255, 0, 0);"></span> 高</td>
+                </tr>
+                <tr>
+                  <td>1007</td>
+                  <td>器械类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 211, 0);"></span> 低</td>
+                </tr>
+                <tr>
+                  <td>1008</td>
+                  <td>器械类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 211, 0);"></span> 低</td>
+                </tr>
+                <tr>
+                  <td>1009</td>
+                  <td>器械类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 211, 0);"></span> 低</td>
+                </tr>
+                 <tr>
+                  <td>1010</td>
+                  <td>器械类</td>
+                  <td>2014-10-01</td>
+                  <td>2016-10-01</td>
+                  <td>一些具体的内容</td>
+                  <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 211, 0);"></span> 低</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pull-right">
+				<ul class="pagination">
+					<li>
+						<a href="#">上一页</a>
+					</li>
+					<li>
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#">4</a>
+					</li>
+					<li>
+						<a href="#">5</a>
+					</li>
+					<li>
+						<a href="#">下一页</a>
+					</li>
+				</ul>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- modal box -->
+          <div class="modal fade modal-box" id="myModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			   <div class="modal-dialog">
+				      <div class="modal-content">
+				         <div class="modal-body" align="center"><h4><strong>您真的要退出吗？</strong></h4></div>
+				         <div class="modal-footer">
+				            <button type="button"   class="btn btn-primary" data-dismiss="modal">关闭</button>
+				            <button type="button"  class="btn btn-primary">确认</button>
+				         </div>
+				      </div>
+			  </div>
+		</div>
+          <!-- modal box -->
+    
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
