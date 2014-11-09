@@ -152,7 +152,7 @@ select.form-control{
 }
 
 textarea.form-control{
-	width:212%;
+	width:180%;
 }
 
 .col-3-from-control{
@@ -165,5 +165,10 @@ textarea.form-control{
 
 .panel-body {
 	padding: 5px;
+}
+
+.project_link{
+	color:black;
+	text-decoration: underline;
 }
 
