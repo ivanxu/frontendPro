@@ -104,7 +104,9 @@
 	                                    <div class="panel-heading ">
 	                                        <h3 class="panel-title">
 	                                            	<strong>项目信息</strong>
-	                                            	<a  data-toggle="collapse"  href="#collapseOne" class="panel_a" ><strong>link</strong></a>
+	                                            	<a  data-toggle="collapse"  href="#collapseOne" class="panel_a" >
+	                                            		<span id="arrow" class="glyphicon glyphicon-chevron-up" style="color: rgb(0, 0, 0);"></span>
+	                                            	</a>
 	                                        </h3>
 	                                    </div>
 	                                    <div id="collapseOne" class="panel-collapse collapse in">
@@ -223,11 +225,13 @@
 	                                </div>
 	<!-------------------------------------------project basic data end ------------------------------------------>
 	<!----------------------------------------project status start ------------------------->
-	                                <div class="panel panel-default panel-info">
+	                                <div class="panel panel-default">
 	                                    <div class="panel-heading">
 	                                        <h3 class="panel-title">
 	                                            	<strong>项目进度</strong>
-	                                            	<a  data-toggle="collapse"  href="#collapseTwo" class="panel_a"><strong>link</strong></a>
+	                                            	<a  data-toggle="collapse"  href="#collapseTwo" class="panel_a">
+	                                            		<span id="arrow" class="glyphicon glyphicon-chevron-down" style="color: rgb(0, 0, 0);"></span>
+	                                            	</a>
 	                                        </h3>
 											
 	                                    </div>
@@ -263,11 +267,13 @@
 	                                </div>
 	<!----------------------------------------project status end ------------------------->
 	<!----------------------------------------outsource start ------------------------->
-	                                <div class="panel panel-default panel-info">
+	                                <div class="panel panel-default">
 	                                    <div class="panel-heading">
 	                                        <h3 class="panel-title">
 	                                            	<strong>外包信息</strong>
-	                                            	<a  data-toggle="collapse"  href="#collapseThree" class="panel_a"><strong>link</strong></a>
+	                                            	<a  data-toggle="collapse"  href="#collapseThree" class="panel_a">
+	                                            		<span id="arrow" class="glyphicon glyphicon-chevron-down" style="color: rgb(0, 0, 0);"></span>
+	                                            	</a>
 	                                        </h3>
 	                                    </div>
 	                                    
@@ -381,11 +387,13 @@
 	                                </div>
 	<!----------------------------------------outsource end ------------------------->
 	<!----------------------------------------custom info start ------------------------->
-	                                <div class="panel panel-default panel-info">
+	                                <div class="panel panel-default">
 	                                    <div class="panel-heading">
 	                                        <h3 class="panel-title">
 	                                            	<strong>客户信息</strong>
-	                                            	<a  data-toggle="collapse"  href="#collapseFour" class="panel_a"><strong>link</strong></a>
+	                                            	<a  data-toggle="collapse"  href="#collapseFour" class="panel_a">
+	                                            		<span id="arrow" class="glyphicon glyphicon-chevron-down" style="color: rgb(0, 0, 0);"></span>
+	                                            	</a>
 	                                        </h3>
 	                                    </div>
 	                                    <div id="collapseFour" class="panel-collapse collapse" style="">
@@ -631,11 +639,13 @@
 	                                    </div>
 	                                </div>
 	<!----------------------------------------custom info end ------------------------->
-	                                <div class="panel panel-default panel-info">
+	                                <div class="panel panel-default">
 	                                    <div class="panel-heading">
 	                                        <h3 class="panel-title">
 	                                            	<strong>客户联系记录</strong>
-	                                            	<a  data-toggle="collapse"  href="#collapseFive" class="panel_a"><strong>link</strong></a>
+	                                            	<a  data-toggle="collapse"  href="#collapseFive" class="panel_a">
+	                                            		<span id="arrow5" class="glyphicon glyphicon-chevron-down" style="color: rgb(0, 0, 0);"></span>
+	                                            	</a>
 	                                        </h3>
 	                                    </div>
 	                                    <div id="collapseFive" class="panel-collapse collapse" style="">
@@ -661,5 +671,17 @@
     <script src="../page_js/plugins/metisMenu/metisMenu.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../page_js/sb-admin-2.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".pagination li ").click(function(){
+    		  $(this).addClass('active')
+    	        .siblings().removeClass('active');
+    	  	});
+	    	$("#arrow5").click(function(){
+	    		$(this).attr("class","glyphicon glyphicon-chevron-up");
+	    	})
+	    });
+	    	
+    </script>
 </body>
 </html>
