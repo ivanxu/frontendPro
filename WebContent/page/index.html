@@ -62,10 +62,7 @@
 			                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
 			                    </a>
 			                    <ul class="dropdown-menu dropdown-user">
-			                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 用户信息</a>
-			                        </li>
-			                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
-			                        </li>
+			                        <li><a id="link_modifyPwd" href="#"><i class="fa fa-gear fa-fw"></i> 修改密码</a></li>
 			                        <li class="divider"></li>
 			                        <li><a href="" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
 			                        </li>
@@ -100,10 +97,16 @@
                             <a id="link_outsource" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>外包信息</strong></a>
                         </li>
                         <li>
-                            <a id="link_proStatus" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>项目进度</strong><span id="projectStatusBadge" class="badge sidebar-badge-margin">1</span></a>
+                            <a id="link_proStatus" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>项目进度</strong></a>
                         </li>
                         <li>
                             <a id="link_customCalling" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>客户联系记录</strong></a>
+                        </li>
+                        <li>
+                            <a id="link_addUser" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>创建新用户</strong></a>
+                        </li>
+                        <li>
+                            <a id="link_preveligeConf" href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  <strong>配置用户权限</strong></a>
                         </li>
                     </ul>
                 </div>
@@ -111,9 +114,7 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-        
-        	<iframe id="mainframe" src="../page/projectBasicData.html" scrolling=yes frameBorder=0 style="width:100%;height:580px;"></iframe>
-        
+        <iframe id="mainframe" src="../page/projectBasicData.html" scrolling=yes frameBorder=0 style="width:100%;height:580px;"></iframe>
    </div> 
     <!-- /#wrapper -->
       <!-- modal box -->
@@ -123,7 +124,7 @@
 				         <div class="modal-body" align="center"><h4><strong class="red-color">您真的要退出吗？</strong></h4></div>
 				         <div class="modal-footer">
 				            <button type="button"   class="btn btn-primary" data-dismiss="modal">关闭</button>
-				            <a href="../formal.html"><button type="button" class="btn btn-primary">确认</button></a>
+				            <a href="../page/formal.html"><button type="button" class="btn btn-primary">确认</button></a>
 				         </div>
 				      </div>
 			  </div>
@@ -164,20 +165,34 @@
 	    	$("#link_proStatus").click(function(){
 	    		$("#mainframe").attr("src","../page/proStatus.html");
 	    	});
-	    	
+	    		    	
 	    	$("#link_customCalling").click(function(){
 	    		$("#mainframe").attr("src","../page/customCalling.html");
 	    	});
+	    	
+	    	$("#link_addUser").click(function(){
+	    		$("#mainframe").attr("src","../page/addUser.html");
+	    	});
+	    	
+	    	$("#link_preveligeConf").click(function(){
+	    		$("#mainframe").attr("src","../page/preveligeConf.html");
+	    	});
+	    	
+	    	$("#link_modifyPwd").click(function(){
+	    		$("#mainframe").attr("src","../page/modifyPwd.html");
+	    	});
+	    	
 	    	
 	    	$(".pagination li ").click(function(){
     		  $(this).addClass('active')
     	        .siblings().removeClass('active');
     	  	});
-	    	
+	    	/*
 	    	$("#projectStatusBadge").click(function(){
 	    		alert($("#projectStatusBadge").text());
 	    		$("#projectStatusBadge").text("");
-	    	})
+	    	});
+	    	*/
 	    	
 	    });
 	    	

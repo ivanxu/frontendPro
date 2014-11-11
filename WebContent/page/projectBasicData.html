@@ -31,12 +31,11 @@
             <form role="form">
                 <div class="col-lg-12">
                     <h2 class="page-header form-group input-group"><strong>项目基本信息</strong>
-                    	<button class="btn btn-default btn-primary" style="margin-left:10px;">创建新的项目</button>
+                    	<input type="button" class="btn btn-default btn-primary" value="创建新的项目" onclick="location='../page/addProject.html'" style="margin-left:10px">
                     	<input type="text" class="form-control" placeholder="请输入项目编号">
-                   	 <span class="input-group-btn">
-                        <button class="btn btn-default btn-primary" type="button"><i class="fa fa-search"></i>
-                        </button>
-                    </span>
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default btn-primary" type="button"><i class="fa fa-search"></i></button>
+	                    </span>
                     </h2>
                 </div>
             </form>
@@ -203,7 +202,7 @@
             <div  class="pull-right">
 				<ul class="pagination">
 					<li>
-						<a href="#"><strong>上一页</strong></a>
+						<a id="paging" href="#"><strong>上一页</strong></a>
 					</li>
 					<li class="active">
 						<a href="#">1</a>
@@ -221,7 +220,7 @@
 						<a href="#">5</a>
 					</li>
 					<li>
-						<a href="#"><strong>下一页</strong></a>
+						<a id="paging" href="#"><strong>下一页</strong></a>
 					</li>
 				</ul>
 			</div>
@@ -244,15 +243,15 @@
     <script src="../page_js/sb-admin-2.js"></script>
     <script type="text/javascript">
 	    $(document).ready(function(){
-	    	
-	    	
-	    	
 	    	$(".pagination li ").click(function(){
     		  $(this).addClass('active')
     	        .siblings().removeClass('active');
     	  	});
-	    	
-	    	
+	    	/*
+	    	$("#paging").click(function(){
+	    		$(this).removeClass('active');
+	    	});
+	    	*/
 	    	
 	    });
 	    	
