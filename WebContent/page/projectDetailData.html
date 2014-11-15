@@ -108,57 +108,85 @@
 	                                            	<a  data-toggle="collapse"  href="#collapseOne" class="panel_a" >
 	                                            		<span id="arrowProBasicData" class="glyphicon glyphicon-chevron-up" style="color: rgb(0, 0, 0);"></span>
 	                                            	</a>
-	                                            	<button id="saveProBasicData" value="1" class="btn btn-default btn-success" style="margin-left:10px;">修改</button>
-	                                            	<button id="cancelProBasicData" value="2" class="btn btn-default btn-success" style="margin-left:10px;display:none">取消</button>
+	                                            	<button id="cancelProBasicData" value="2" class="btn btn-default btn-success pull-right" style="margin-left:10px;margin-right:10px;display:none">取消</button>
+	                                            	<button id="saveProBasicData" value="1" class="btn btn-default btn-success pull-right" style="margin-left:10px;margin-right:10px">修改</button>
+	                                            	<button id="addContract"  class="btn btn-default btn-success" style="margin-left:10px;">创建新的合同</button>
 	                                        </h3>
 	                                    </div>
 	                                    <div id="collapseOne" class="panel-collapse collapse in">
 	                                        <div id="panelProBasicData" class="panel-body">
 	                                        	<div class="row">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div><label>项目编号 </label></div>
-	                                        			<div><input id="proBasicProjectID" value="1001" type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>项目编号 </label>
+	                                        				<label class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div><input id="proBasicProjectID"  value="1001" type="text" class="form-control" ></div>
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div><label>项目类型 </label></div>
-	                                        			<div><input type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>项目类型 </label>
+	                                        				<label id="projectTypeLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div><input id="projectType" maxlength=2 type="text" class="form-control" ></div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>开始日期 </label></div>
-	                                        			<div ><input type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>开始日期 </label>
+	                                        				<label id="startDateLbl"  class="warning-style">该字段不允许为空</label>
+	                                        				<label id="dateFormatLbl"  class="warning-style">日期格式不正确(请修改成'yyyy-mm-dd')</label>
+	                                        				<label id="startdateDiffLbl"  class="warning-style">结束日期不能小于开始日期</label>
+	                                        			</div>
+	                                        			<div><input id="startDate" maxlength=10 type="text" class="form-control" ></div>
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>结束日期</label></div>
-	                                        			<div ><input type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>结束日期</label>
+	                                        				<label id="endDateLbl" class="warning-style">该字段不允许为空</label>
+	                                        				<label id="enddateDiffLbl"  class="warning-style">结束日期不能小于开始日期</label>
+	                                        			</div>
+	                                        			<div><input id="endDate" maxlength=10 type="text" class="form-control" ></div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>潜在经费</label></div>
-	                                        			<div >
-	                                        				<div ><input type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>潜在经费</label>
+	                                        				<label id="potentialExpendLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div>
+	                                        				<div ><input id="potentialExpend" maxlength=10 type="text" class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>样本数量</label></div>
-	                                        			<div >
-	                                        				<div ><input type="text" class="form-control" ></div>
+	                                        			<div>
+	                                        				<label>样本数量</label>
+	                                        				<label id="sampleCountLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div>
+	                                        				<div ><input id="sampleCount" maxlength=10 type="text" class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div> <label>技术平台</label> </div>
+	                                        			<div>
+	                                        				<label>技术平台</label> 
+	                                        				<label id="tecPlatformLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
 	                                        			<div >
-	                                        				<div ><input type="text" class="form-control" ></div>
+	                                        				<div><input  id="tecPlatform" maxlength=10 type="text" class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>研究方向 </label></div>
-	                                        			<div >
-	                                        				<select class="form-control form-control-research" >
+	                                        			<div>
+	                                        				<label>研究方向 </label>
+	                                        				<label id="researchDirLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div>
+	                                        				<select  id="researchDir" class="form-control form-control-research" >
 		                                                    	<option>--请选择--</option>
 				                                                <option>医疗类</option>
 				                                                <option>器械类</option>
@@ -208,9 +236,12 @@
 	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>项目内容 </label></div>
-	                                        			<div >
-	                                        				<textarea class="form-control" rows="8" ></textarea>
+	                                        			<div>
+	                                        				<label>项目内容 </label>
+	                                        				<label id="projectContentLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div>
+	                                        				<textarea id="projectContent" class="form-control" rows="8" ></textarea>
 	                                        			</div>
 	                                        		</div>
 	                                        	</div>
@@ -253,7 +284,7 @@
 												<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div><label>项目编号 </label></div>
-	                                        			<div><input id="" type="text" class="form-control" ></div>
+	                                        			<div><input id="statusProId" type="text" class="form-control" ></div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
@@ -268,8 +299,11 @@
 	                                        	<!-- add new pro status start  -->
 	                                        	<div id="proStatusDate" class="row row-margin" style="align:center;display:none" >
 	                                        		<div class="col-md-6  col-sm-12 col-xs-12" >
-	                                        				<div><label>进度日期</label></div>
-		                                        			<div ><input id="inputProStatusDate" type="text" class="form-control" ></div>
+	                                        				<div>
+	                                        					<label>进度日期</label>
+	                                        					<label id="proStatusDateLbl" maxlength=10 class="warning-style">该字段不允许为空</label>
+	                                        				</div>
+		                                        			<div><input id="inputProStatusDate" type="text" class="form-control" ></div>
 		                                        	</div>
 	                                        	</div>
 	                                        	<div id="proStatusUpdate" class="row row-margin" style="display:none">
@@ -285,16 +319,19 @@
 	                                        	</div>
 	                                        	<div id="proStatusContent" class="row row-margin"  style="display:none">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
-	                                        			<div ><label>进度内容 </label></div>
 	                                        			<div>
-	                                        				<textarea id="inpuProStatusContent" class="form-control" rows="8" cols="4" ></textarea>
+	                                        				<label>进度内容 </label>
+	                                        				<label id="proStatusContentLbl" class="warning-style">该字段不允许为空</label>
+	                                        			</div>
+	                                        			<div>
+	                                        				<textarea id="inputProStatusContent" class="form-control" rows="8" cols="4" ></textarea>
 	                                        			</div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div id="proStatusBtn" class="row" style="margin-top:30px;display:none">	                                        		
 	                                        		<div  class="col-md-6 col-sm-12 col-xs-12">
-                                      					<button id="btnSave" class="btn btn-default btn-primary">保存</button>
-                                      					<button id="btnCancel" class="btn btn-default btn-primary">取消</button>
+                                      					<button id="saveProStatus" value="1" class="btn btn-default btn-primary">保存</button>
+                                      					<button id="cancelProStatus" value="2" class="btn btn-default btn-primary">取消</button>
 			                                        </div>
 	                                        	</div>
 	                                        	<!-- add new pro status end  -->
@@ -330,28 +367,28 @@
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div><label>外包单位</label></div>
-	                                        	</div>
-	                                        			<div><input type="text" class="form-control" ></div>
+	                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 	                                        		</div>
+	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        				<div><label>联系人</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 	                                        			</div>
 	                                        			<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div ><label>联系人电话</label></div>
-		                                        		    <div><input type="text" class="form-control" ></div>
+		                                        		    <div><input type="text" maxlength=12 class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        	
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div ><label>合同金额</label></div>
-	                                        			<div ><input type="text" class="form-control" ></div>
+	                                        			<div ><input type="text" maxlength=10 class="form-control" ></div>
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div ><label>送样日期</label></div>
-	                                        			<div ><input type="text" class="form-control" ></div>
+	                                        			<div ><input type="text" maxlength=10 class="form-control" ></div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
@@ -367,7 +404,7 @@
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div ><label>样本数量</label></div>
 	                                        			<div >
-	                                        				<div ><input type="text" class="form-control" ></div>
+	                                        				<div ><input type="text" maxlength=10 class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        	</div>
@@ -383,7 +420,7 @@
 		                                        	<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div ><label>地址 </label></div>
 		                                        			<div >
-		                                        				<textarea class="form-control" rows="8" ></textarea>
+		                                        				<textarea class="form-control" maxlength=50 rows="8" ></textarea>
 		                                        			</div>
 		                                        		</div>
 	                                        	</div>
@@ -399,24 +436,24 @@
 	                                        		</div>
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        			<div><label>外包单位</label></div>
-	                                        			<div><input type="text" class="form-control" ></div>
+	                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 	                                        		</div>
 	                                        	</div>
 	                                        	<div class="row row-margin">
 	                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 	                                        				<div><label>联系人</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 	                                        			</div>
 	                                        			<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div ><label>联系人电话</label></div>
-		                                        		    <div><input type="text" class="form-control" ></div>
+		                                        		    <div><input type="text"  maxlength=12 class="form-control" ></div>
 	                                        			</div>
 	                                        		</div>
 	                                        	<div class="row row-margin">
 		                                        	<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div ><label>地址 </label></div>
 		                                        			<div >
-		                                        				<textarea class="form-control" rows="8" ></textarea>
+		                                        				<textarea class="form-control" maxlength=50 rows="8" ></textarea>
 		                                        			</div>
 		                                        		</div>
 	                                        	</div>
@@ -461,7 +498,7 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>姓名</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
@@ -474,47 +511,47 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>年龄</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=3 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系电话</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=12 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系手机</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=12 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>工作单位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>科室/部门</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>职位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>电子邮件</label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	  <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系地址 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>研究方向 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 
@@ -531,7 +568,7 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>姓名 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
@@ -541,53 +578,53 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>年龄 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=3 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系电话 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系手机 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 				                                 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>工作单位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>科室/部门 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>职位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>电子邮件 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系地址 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>研究方向 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>与负责人关系 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>负责内容 </label></div>
@@ -607,7 +644,7 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>姓名 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
@@ -617,53 +654,53 @@
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>年龄 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=3 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系电话 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系手机 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 				                                 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>工作单位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>科室/部门 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>职位 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>电子邮件 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>联系地址 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=50 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>研究方向 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text" maxlength=10 class="form-control" ></div>
 		                                        		</div>
 	                                        	 </div>
 	                                        	 <div class="row">
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>与负责人关系 </label></div>
-		                                        			<div><input type="text" class="form-control" ></div>
+		                                        			<div><input type="text"  maxlength=10 class="form-control" ></div>
 		                                        		</div>
 		                                        		<div class="col-md-6 col-sm-12 col-xs-12">
 		                                        			<div><label>负责内容 </label></div>
@@ -751,7 +788,7 @@
 	    	/************switch save button and  cancel button****/
 	    	$("#saveProBasicData").click(function(){
 	    		if($(this).attr("value")=="1"){
-	    			$(this).attr("value","3");
+	    			$(this).attr("value","3"); 
 	    			$("#panelProBasicData input").attr("disabled",false);
 	    			$("#panelProBasicData radio").attr("disabled",false);
 	    			$("#panelProBasicData select").attr("disabled",false);
@@ -766,13 +803,88 @@
 	    			$("#panelProBasicData select").attr("disabled",true);
 	    			$("#panelProBasicData textarea").attr("disabled",true);
 	    		}else if($(this).attr("value")=="3"){
-	    			$(this).attr("value","1");
-	    			$(this).text("修改");
-	    			$("#panelProBasicData input").attr("disabled",true);
-	    			$("#panelProBasicData radio").attr("disabled",true);
-	    			$("#panelProBasicData select").attr("disabled",true);
-	    			$("#panelProBasicData textarea").attr("disabled",true);
-	    			$("#cancelProBasicData").hide();
+	    			/***validate null project basic data field****/
+	    			var projectType = $("#projectType").val();
+	    				projectType = $.trim(projectType);
+    				var startDate = $("#startDate").val();
+    					startDate = $.trim(startDate);
+    				var endDate = $("#endDate").val();
+    					endDate = $.trim(endDate);
+    				var potentialExpend = $("#potentialExpend").val();
+    					potentialExpend = $.trim(potentialExpend);
+    				var sampleCount = $("#sampleCount").val();
+    					sampleCount = $.trim(sampleCount);
+    				var tecPlatform = $("#tecPlatform").val();
+    					tecPlatform = $.trim(tecPlatform);
+    				var researchDir = $("#researchDir").val();
+    					researchDir = $.trim(researchDir);
+    				var projectContent = $("#projectContent").val();
+    					projectContent = $.trim(projectContent);
+	    			if(projectType.length<1){
+	    				$("#projectTypeLbl").show();
+	    			}else{
+	    				$("#projectTypeLbl").hide();
+	    			}
+					if(startDate.length<1){
+						$("#startDateLbl").show();    				
+					}else{
+						if(startDate>endDate){
+	    					$("#startdateDiffLbl").show();
+	    				}else{
+	    					$("#startdateDiffLbl").hide();
+	    				}
+	    				$("#startDateLbl").hide();
+	    				//if($("#startDate").datepick({dateFormat:"yyyy-mm-dd"})){
+	    					//$("#dateFormatLbl").show();
+	    				//}
+	    			}
+					if(endDate.length<1){
+						$("#endDateLbl").show();
+					}else{
+						if(startDate>endDate){
+	    					$("#enddateDiffLbl").show();
+	    				}else{
+	    					$("#enddateDiffLbl").hide();
+	    				}
+	    				$("#endDateLbl").hide();
+	    			}
+					if(potentialExpend.length<1){
+						$("#potentialExpendLbl").show();
+					}else{
+	    				$("#potentialExpendLbl").hide();
+	    			}
+					if(sampleCount.length<1){
+						$("#sampleCountLbl").show();
+					}else{
+	    				$("#sampleCountLbl").hide();
+	    			}
+					if(tecPlatform.length<1){
+						$("#tecPlatformLbl").show();
+					}else{
+	    				$("#tecPlatformLbl").hide();
+	    			}
+					if(researchDir.length<1){
+						$("#researchDirLbl").show();
+					}else{
+	    				$("#researchDirLbl").hide();
+	    			}
+					if(projectContent.length<1){
+						$("#projectContentLbl").show();
+					}else{
+	    				$("#projectContentLbl").hide();
+	    			}
+	    			if(projectType.length<1||projectType.length<1||projectType.length<1||projectType.length<1
+	    			   ||projectType.length<1||projectType.length<1||projectType.length<1||projectType.length<1){
+	    				
+	    			}else{
+	    				$(this).attr("value","1");
+		    			$(this).text("修改");
+		    			$("#panelProBasicData input").attr("disabled",true);
+		    			$("#panelProBasicData radio").attr("disabled",true);
+		    			$("#panelProBasicData select").attr("disabled",true);
+		    			$("#panelProBasicData textarea").attr("disabled",true);
+		    			$("#cancelProBasicData").hide();
+	    			}
 	    		}
 	    	});
 	    	$("#cancelProBasicData").click(function(){
@@ -784,39 +896,79 @@
 	    			$("#panelProBasicData select").attr("disabled",true);
 	    			$("#panelProBasicData textarea").attr("disabled",true);
 	    			$("#cancelProBasicData").hide();
+	    			/*label hide*/
+	    			$("#projectTypeLbl").hide();
+	    			$("#startDateLbl").hide();
+	    			$("#endDateLbl").hide();
+	    			$("#potentialExpendLbl").hide();
+	    			$("#sampleCountLbl").hide(); 
+	    			$("#tecPlatformLbl").hide();
+	    			$("#researchDirLbl").hide();
+	    			$("#projectContentLbl").hide();
 	    		}
 	    	});
 	    	
 	    	$("#saveProStatus").click(function(){
 	    		if($(this).attr("value")=="1"){
-	    			$(this).attr("value","3");
+	    			//$(this).attr("value","3");
 	    			$("#panelProStatus input").attr("disabled",false);
 	    			$("#panelProStatus radio").attr("disabled",false);
 	    			$("#panelProStatus select").attr("disabled",false);
 	    			$("#panelProStatus textarea").attr("disabled",false);
+	    			$("#statusProId").attr("disabled",true);
 	    			$(this).text("保存");
 	    			$("#cancelProStatus").show();
-	    		}else if($(this).attr("value")=="2"){
-	    			$(this).text("修改");
+	    			/***validate null project basic data field****/
+	    			var inputProStatusDate = $("#inputProStatusDate").val();
+	    				inputProStatusDate = $.trim(inputProStatusDate);
+					var inputProStatusContent = $("#inputProStatusContent").val();
+						inputProStatusContent = $.trim(inputProStatusContent);
+					if(inputProStatusDate.length<1){
+	    				$("#proStatusDateLbl").show();
+	    			}else{
+	    				$("#proStatusContentLbl").hide();
+	    			}
+					if(inputProStatusContent.length<1){
+						$("#proStatusContentLbl").show();    				
+					}else{
+	    				$("#proStatusContentLbl").hide();
+	    			}
+					if(inputProStatusDate.length>1&&inputProStatusContent.length>1){
+						$("#proStatusDate").css("display","none");		
+						$("#proStatusUpdate").css("display","none");
+						$("#proStatusContent").css("display","none");
+						$("#proStatusBtn").css("display","none");
+					}
+	    			
 	    		}else if($(this).attr("value")=="3"){
 	    			$(this).attr("value","1");
-	    			$(this).text("修改");
+	    			$(this).hide();
+	    			$("#proStatusDate").css("display","none");		
+					$("#proStatusUpdate").css("display","none");
+					$("#proStatusContent").css("display","none");
+					$("#proStatusBtn").css("display","none");
 	    			$("#panelProStatus input").attr("disabled",false);
 	    			$("#panelProStatus radio").attr("disabled",false);
 	    			$("#panelProStatus select").attr("disabled",false);
 	    			$("#panelProStatus textarea").attr("disabled",false);
+	    			$("#statusProId").attr("disabled",true);
 	    			$("#cancelProStatus").hide();
 	    		}
 	    	});
 	    	$("#cancelProStatus").click(function(){
 	    		if($(this).attr("value")=="2"){
-	    			$("#saveProStatus").attr("value","1");
-	    			$("#saveProStatus").text("修改");
 	    			$("#panelProStatus input").attr("disabled",false);
 	    			$("#panelProStatus radio").attr("disabled",false);
 	    			$("#panelProStatus select").attr("disabled",false);
 	    			$("#panelProStatus textarea").attr("disabled",false);
-	    			$("#cancelProStatus").hide();
+	    			$("#statusProId").attr("disabled",true);
+	    			$("#proStatusDate").css("display","none");		
+					$("#proStatusUpdate").css("display","none");
+					$("#proStatusContent").css("display","none");
+					$("#proStatusBtn").css("display","none");
+	    			/*label hide*/
+	    			$("#proStatusDateLbl").hide();
+	    			$("#proStatusContentLbl").hide();
 	    		}
 	    	});
 	    	
@@ -920,7 +1072,10 @@
 				$("#radioProStatus2").attr("disabled",false);
 				$("#radioProStatus3").attr("disabled",false);
 				$("#radioProStatus4").attr("disabled",false);
-				$("#inpuProStatusContent").attr("disabled",false);
+				$("#inputProStatusContent").attr("disabled",false);
+				$("#statusProId").attr("disabled",true);
+				$("#inputProStatusDate").val("");
+				$("#inputProStatusContent").val("");
 			});
 			
 			$("#btnCancel").click(function(){

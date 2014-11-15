@@ -16,22 +16,17 @@
     <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<link href="../page_css/exam.css"  rel="stylesheet">
  	<link href="../page_css/theme.css" rel="stylesheet">
- 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 <meta charset="UTF-8">
-<title>customInfo</title>
+<title>合同基本信息</title>
 </head>
 <body>
+
+
 <div id="page-wrapper"> 
             <div class="row">
             <form role="form">
                 <div class="col-lg-12">
-                    <h2 class="page-header form-group input-group"><strong>项目基本信息</strong>
-                    	<input type="button" class="btn btn-default btn-primary" value="创建新的项目" onclick="location='../page/addProject.html'" style="margin-left:10px">
+                    <h2 class="page-header form-group input-group"><strong>财务合同基本信息</strong>
                     	<input type="text" class="form-control" placeholder="请输入项目编号">
 	                    <span class="input-group-btn">
 	                        <button class="btn btn-default btn-primary" type="button"><i class="fa fa-search"></i></button>
@@ -46,17 +41,17 @@
             <table class="table table-hover">
               <thead>
                 <tr>
+                  <th>合同编号</th>
                   <th>项目编号</th>
-                  <th>客户基本信息</th>
-                  <th>项目信息</th>
-                  <th>外包信息</th>
-                  <th>项目进度</th>
-                  <th>客户联系记录</th>
+                  <th>合同状态</th>
+                  <th>合同签订人</th>
+                  <th>签订日期</th>
+                  <th>合同金额</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><a class="a-color" href="../page/projectDetailData.html" target="_blank">1001</a></td>
+                  <td><a class="a-color" href="../page/contractDetailData.html" target="_blank">1001</a></td>
                   <td>Ivan</td>
                   <td>医疗类</td>
                   <td>甲公司</td>
@@ -218,9 +213,7 @@
         </div>
         <!-- /#page-wrapper -->
  </div>
-     
-    
-    
+
      <script src="../page_js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -233,10 +226,7 @@
     <script src="../page_js/sb-admin-2.js"></script>
     <script type="text/javascript">
 	    $(document).ready(function(){
-	    	$(".pagination li ").click(function(){
-    		  $(this).addClass('active')
-    	        .siblings().removeClass('active');
-    	  	});
+	    	
 	    	/*
 	    	$("#paging").click(function(){
 	    		$(this).removeClass('active');

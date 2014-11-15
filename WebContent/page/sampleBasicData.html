@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../page_css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../page_css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../page_css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../page_css/sb-admin-2.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<link href="../page_css/exam.css"  rel="stylesheet">
+<meta charset="UTF-8">
+<title>样品管理</title>
+</head>
+<body>
+<div id="page-wrapper"> 
+            <div class="row">
+            <form role="form">
+                <div class="col-lg-12">
+                    <h2 class="page-header form-group input-group"><strong>样本基本信息</strong>
+                    	<input type="text" class="form-control" placeholder="请输入项目编号">
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default btn-primary" type="button"><i class="fa fa-search"></i></button>
+	                    </span>
+                    </h2>
+                </div>
+            </form>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+				<div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>项目编号</th>
+                  <th>项目负责人</th>
+                  <th>样本编号</th>
+                  <th>收样日期</th>
+                  <th>存放位置</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a class="a-color" href="../page/sampleDetailData.html" >1001</a></td>
+                  <td>Ivan</td>
+                  <td>医疗类</td>
+                  <td>甲公司</td>
+                  <td>
+                  
+                  </td>
+                </tr>
+                <tr>
+                  <td>1002</td>
+                  <td>Terry</td>
+                  <td>器械类</td>
+                  <td>乙公司</td>
+                  <td >
+	                 
+				 </td>
+                </tr>
+                 <tr>
+                  <td>1003</td>
+                  <td>James</td>
+                  <td>政府类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+                 <tr>
+                  <td>1004</td>
+                  <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+                 <tr>
+                  <td>1005</td>
+                   <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+                 <tr>
+                  <td>1006</td>
+                   <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+                <tr>
+                  <td>1007</td>
+                   <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+                <tr>
+                  <td>1008</td>
+                  <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                 
+				  </td>
+                </tr>
+                <tr>
+                  <td>1009</td>
+                  <td>Robin</td>
+                  <td>海外类</td>
+                  <td>公司 </td>
+                  <td>
+	                  
+        		 	   
+				  </td>
+                </tr>
+                 <tr>
+                  <td>1010</td>
+                  <td>Robin</td>
+                  <td>海外类</td>
+                  <td>丙公司</td>
+                  <td>
+	                  
+				  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div  class="pull-right">
+				<ul class="pagination">
+					<li>
+						<a id="paging" href="#"><strong>上一页</strong></a>
+					</li>
+					<li class="active">
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#">4</a>
+					</li>
+					<li>
+						<a href="#">5</a>
+					</li>
+					<li>
+						<a id="paging" href="#"><strong>下一页</strong></a>
+					</li>
+				</ul>
+			</div>
+          </div>
+        </div>
+        <!-- /#page-wrapper -->
+ </div>
+
+ <script src="../page_js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../page_js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../page_js/plugins/metisMenu/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../page_js/sb-admin-2.js"></script>
+    
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(".pagination li ").click(function(){
+    		  $(this).addClass('active')
+    	        .siblings().removeClass('active');
+    	  	});
+	    	/*
+	    	$("#paging").click(function(){
+	    		$(this).removeClass('active');
+	    	});
+	    	*/
+	    	
+	    });
+	    	
+    </script>
+</body>
+</html>
