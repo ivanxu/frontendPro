@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../page_css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../page_css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../page_css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../page_css/sb-admin-2.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<link href="../page_css/exam.css"  rel="stylesheet">
+<meta charset="UTF-8">
+<title>详细信息页面</title>
+</head>
+<body>
+<div id="page-wrapper">
+	<div class="row">
+		<div class="col-lg-12">
+                   <!-- <div class="panel panel-default panel-primary"> --> 
+                        
+                        <div class="panel-body">
+                        	<div class="panel panel-default panel-info">
+                        			<div class="panel-heading ">
+                                        <h3 class="panel-title">
+                                            	<strong>文献</strong>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                    	<div class="row">
+                                        	<div class="col-md-12">
+												<button id="createDocument" data-toggle="modal" data-target="#modalCreateFolder"
+												        class="btn btn-default btn-primary pull-left" 
+												        style="margin-left:10px;margin-top:20px;margin-bottom:20px">创建新的文献</button>
+                                        	</div>
+		                                </div>
+		                                <div class="table-responsive">
+								            <table  class="table table-hover">
+								              <thead>
+								                <tr>
+								                  <th>标题</th>
+								                  <th>作者</th> 
+								                  <th>发布时间</th>
+								                  <th>地点</th>
+								                  <th>摘要</th>
+								                  <th></th>
+								                </tr>
+								              </thead>
+								              <tbody id="folderTableBody">
+								               	<tr>
+								               		<td>项目方案</td>
+								               		<td>所有者</td>
+								               		<td></td>
+								               		<td></td>
+								               		<td></td>
+								               		<td><a style="color:blue;">下载</a></td>
+								               	</tr>
+								               	<tr>
+								               		<td>项目合同</td>
+								               		<td>所有者</td>
+								               		<td></td>
+								               		<td></td>
+								               		<td></td>
+								               		<td id="tddddd"><a style="color:blue;">下载</a></td>
+								               	</tr>
+								               	 	
+								              </tbody>
+								            </table>
+          								</div>
+                                       	<div class="row row-margin">
+                                       		<div class="col-md-4 col-sm-12 col-xs-12">
+                                       			
+                                       		</div>
+                                       		<div class="col-md-4 col-sm-12 col-xs-12">
+                                       			
+                                       		</div>
+                                       	</div>
+                                    </div>
+                        	</div>
+                        </div>
+                    <!--  </div>-->
+        </div>
+    </div>
+
+</div>
+	
+
+
+  <script src="../page_js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../page_js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../page_js/plugins/metisMenu/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../page_js/sb-admin-2.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	    	$(document).ready(function() {
+				/*
+				$("#createDocument").click(function() {
+					window.location.replace("http://"+window.location.host+"/admin/project/add-redirect");
+					return false;
+				});
+				*/
+
+			});
+	   	});
+    </script>
+</body>
+</html>
